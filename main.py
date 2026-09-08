@@ -24,18 +24,18 @@ def mostrar_bienvenida():
 
 mostrar_bienvenida()
 
-# def saludar(nombre):
-#     print(f"Hola {nombre}")
+def saludar(nombre):
+    return nombre
 
-# def apellidos(apellido1, apellido2):
-#     print(f" {apellido1} {apellido2}")
+def apellidos(apellido1, apellido2):
+    return (f"{apellido1} {apellido2}")
 
-# def nombre_completo():
-#     print(saludar() + apellidos())
+def nombre_completo(nombre, apellido1, apellido2):
+        print(f"Hola {saludar(nombre)} {apellidos(apellido1, apellido2)}")
 
-# saludar("Alvaro")
-# apellidos("Trigueros","Vazquez")
-# nombre_completo()
+nombre = saludar("Alvaro")
+dos_apellidos = apellidos("Trigueros","Vazquez")
+nombre_completo("Alvaro" , "Trigueros" , "Vazquez")
 
 def multiplicar(num1,num2):
     return num1 * num2
