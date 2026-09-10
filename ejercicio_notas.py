@@ -4,8 +4,10 @@
 def calcular_media (nota1, nota2, nota3):
     if (nota1 > 10 or nota2 > 10 or nota3 > 10):
         print(f"Una de las nota no es valida")
+        return
     elif (nota1 < 0 or nota2 < 0 or nota3 < 0):
         print(f"Una de las nota no es valida")
+        return
     else:
         media = (nota1 + nota2 + nota3)/3
         return media 
@@ -38,8 +40,13 @@ def puede_compensar(media):
 # print(F"{puede_compensar(4.4)}")
 
 def mostrar_resultado(alumno, nota1, nota2, nota3):
-    print(f"Alumno: {alumno}")
+   
     nota_media  = calcular_media(nota1,nota2,nota3)
+    if (nota_media is None):
+        return
+    
+    print(f"Alumno: {alumno}")
+    nota_media = round(nota_media,2)
     estado_media = obtener_estado(nota_media)
     print(f"Media: {nota_media}")
     print(f"Estado: {estado_media}")
@@ -49,6 +56,6 @@ def mostrar_resultado(alumno, nota1, nota2, nota3):
     else:
         print(f"No puede compensar")
 
-mostrar_resultado("gochi", 10, 5, 0)
-mostrar_resultado("julia", 10, 10, 9.9)
-mostrar_resultado("David", 1, 4, 3)
+mostrar_resultado("gochi", 11, 5, 0)
+# mostrar_resultado("julia", 10, 10, 9.9)
+# mostrar_resultado("David", 1, 4, 3)
