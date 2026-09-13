@@ -46,5 +46,5 @@ def mostrar_pedido(precio, cantidad, vip):
     subtotal = calcular_envio(subtotal)
     print(f"Precio final:{subtotal}")
 
-mostrar_pedido(2, 1, True)
+mostrar_pedido(2, 1, False)
  
